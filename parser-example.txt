@@ -1,0 +1,5 @@
+# $phpObject = (new Parser())->parse({"first_name":"ainsley","last_name":"clarke"}); parsing json
+
+# $phpObject = (new Parser())->parse(["first_name"=>"ainsley","last_name"=>"clarke"]); parsing an array
+
+# potentially add csv and xml parsing
