@@ -13,7 +13,7 @@ class ParserDataObjectSpec extends ObjectBehavior
 		$this->beConstructedWith($data);
 	}
 
-    function it_is_initializable() {
+    public function it_is_initializable() {
 
         $this->shouldHaveType(ParserDataObject::class);
     }

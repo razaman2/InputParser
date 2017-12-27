@@ -7,8 +7,8 @@ use Prophecy\Argument;
 
 class JsonParserSpec extends ObjectBehavior
 {
-    function it_is_initializable()
-    {
+    public function it_is_initializable() {
+
         $this->shouldHaveType(\Parser\Parsers\JsonParser::class);
     }
 }

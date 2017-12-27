@@ -9,7 +9,7 @@ class Parser
     	return $this->setParser($data)->data();
     }
 
-    public function setParser($data) {
+    protected function setParser($data) {
 
 	    return ParserFactory::getParserType($data);
     }

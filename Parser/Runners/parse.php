@@ -2,17 +2,18 @@
 
 	require_once '../../vendor/autoload.php';
 
-	try {
-		$obj = new stdClass();
-		$obj->first_name = 'Miyosha';
-		$obj->last_name = 'Sparkes';
-		$obj->age = 29;
-		$obj->married = true;
-		$obj->test = null;
-		$obj->pregnant = false;
-		$obj->height = 5.6;
+	$obj = new stdClass();
+	$obj->first_name = 'Miyosha';
+	$obj->last_name = 'Sparkes';
+	$obj->age = 29;
+	$obj->married = true;
+	$obj->test = null;
+	$obj->pregnant = false;
+	$obj->height = 5.6;
 
-		$inputData = (new \Parser\Parser())->parse($obj);
+	try {
+
+		$inputData = (new \Parser\Parser())->parse('');
 	} catch(\Parser\Exceptions\InvalidInputDataException $e) {
 
 		echo $e->getMessage();

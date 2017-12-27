@@ -21,6 +21,15 @@ class ParserFactorySpec extends ObjectBehavior
 	    $this->getParserType($arrayData)->shouldHaveType(\Parser\Parsers\ArrayParser::class);
     }
 
+    public function it_should_return_an_object_parser_that_implements_parsable() {
+
+		$objectData = new \stdClass();
+		$objectData->first_name = 'ainsley';
+		$objectData->last_name = 'clarke';
+	    $this->getParserType($objectData)->shouldImplement(\Parser\Interfaces\Parsable::class);
+	    $this->getParserType($objectData)->shouldHaveType(\Parser\Parsers\ObjectParser::class);
+    }
+
     public function it_should_throw_Invalid_input_data_exception() {
 
 		$this->shouldThrow(\Parser\Exceptions\InvalidInputDataException::class)->duringGetParserType('');

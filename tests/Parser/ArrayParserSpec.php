@@ -7,13 +7,13 @@ use Prophecy\Argument;
 
 class ArrayParserSpec extends ObjectBehavior
 {
-	function let($inputData) {
+	public function let($inputData) {
 
 //		$this->beConstructedWith($inputData);
 	}
 
-    function it_is_initializable()
-    {
+    public function it_is_initializable() {
+
         $this->shouldHaveType(\Parser\Parsers\ArrayParser::class);
     }
 }
